@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           sengokuixa-meta
 // @description    戦国IXAを変態させるツール
-// @version        1.6.2.1
+// @version        1.6.2.1.1
 // @namespace      sengokuixa-meta
 // @include        http://*.sengokuixa.jp/*
 // @require        https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js
@@ -2954,7 +2954,7 @@ var Append = {
 								postData['material_cid[]'].push( remain_page[i].card_id.toInt() );
 							}
 
-							$.post('/union/union_levelup.php', postData )
+							$.post('/union/special_execute.php', postData )
 							.then( function( html ) {
 								var $html = $(html);
 								msg.message( $html.find('.common_box3bottom P:first').text() );
